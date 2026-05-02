@@ -732,6 +732,12 @@ footer {
     flex-direction: column;
   }
 
+  .form-row input,
+  .form-row select {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .footer-container {
     flex-direction: column;
   }
@@ -739,6 +745,17 @@ footer {
   .back-to-top {
     bottom: 20px;
     right: 20px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #contact {
+    overflow: hidden;
   }
 }
 
