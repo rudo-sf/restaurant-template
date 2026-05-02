@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bella Vita Restaurant</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Bella Vita</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Reserve</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-subtitle">Fine Italian Dining</p>
+        <h1>Where Every Meal<br>Tells a Story</h1>
+        <p class="hero-desc">Authentic recipes, fresh ingredients, and an atmosphere crafted for unforgettable evenings.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn">Reserve a Table</a>
+          <a href="#menu" class="btn btn-outline">View Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop" alt="Restaurant interior" />
+        </div>
+        <div class="about-text">
+          <span class="section-label">Our Story</span>
+          <h2>A Taste of Italy in the Heart of the City</h2>
+          <p>Founded in 1998 by the Rossi family, Bella Vita has been serving authentic Italian cuisine passed down through generations. Every dish is made from scratch using locally sourced ingredients and traditional techniques.</p>
+          <p>From our wood-fired pizzas to our hand-rolled pastas, we bring the warmth of an Italian kitchen to every plate we serve.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">25+</span>
+              <span class="stat-label">Years Open</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">40+</span>
+              <span class="stat-label">Menu Items</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4.9★</span>
+              <span class="stat-label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2>Our Menu</h2>
+        <p>Crafted with passion, served with love</p>
+      </div>
+      <div class="menu-tabs">
+        <button class="tab-btn active" onclick="filterMenu('all')">All</button>
+        <button class="tab-btn" onclick="filterMenu('starters')">Starters</button>
+        <button class="tab-btn" onclick="filterMenu('pasta')">Pasta</button>
+        <button class="tab-btn" onclick="filterMenu('mains')">Mains</button>
+        <button class="tab-btn" onclick="filterMenu('desserts')">Desserts</button>
+      </div>
+      <div class="menu-grid">
+
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item-info">
+            <h3>Bruschetta al Pomodoro</h3>
+            <p>Toasted bread with fresh tomatoes, basil, and extra virgin olive oil</p>
+          </div>
+          <span class="menu-price">$12</span>
+        </div>
+
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item-info">
+            <h3>Burrata e Prosciutto</h3>
+            <p>Creamy burrata with aged prosciutto and arugula</p>
+          </div>
+          <span class="menu-price">$18</span>
+        </div>
+
+        <div class="menu-item" data-category="pasta">
+          <div class="menu-item-info">
+            <h3>Spaghetti Carbonara</h3>
+            <p>Classic Roman pasta with guanciale, egg yolk, and pecorino romano</p>
+          </div>
+          <span class="menu-price">$24</span>
+        </div>
+
+        <div class="menu-item" data-category="pasta">
+          <div class="menu-item-info">
+            <h3>Pappardelle al Ragù</h3>
+            <p>Hand-rolled pasta with slow-cooked Bolognese meat sauce</p>
+          </div>
+          <span class="menu-price">$26</span>
+        </div>
+
+        <div class="menu-item" data-category="pasta">
+          <div class="menu-item-info">
+            <h3>Rigatoni all'Amatriciana</h3>
+            <p>Tomato sauce with guanciale, chili flakes, and pecorino</p>
+          </div>
+          <span class="menu-price">$22</span>
+        </div>
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item-info">
+            <h3>Branzino al Forno</h3>
+            <p>Oven-roasted sea bass with capers, olives, and lemon</p>
+          </div>
+          <span class="menu-price">$38</span>
+        </div>
+
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item-info">
+            <h3>Bistecca alla Fiorentina</h3>
+            <p>T-bone steak Florentine style with rosemary and truffle oil</p>
+          </div>
+          <span class="menu-price">$52</span>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+          <div class="menu-item-info">
+            <h3>Tiramisù della Casa</h3>
+            <p>House-made tiramisu with espresso-soaked ladyfingers</p>
+          </div>
+          <span class="menu-price">$14</span>
+        </div>
+
+        <div class="menu-item" data-category="desserts">
+          <div class="menu-item-info">
+            <h3>Panna Cotta ai Frutti</h3>
+            <p>Silky vanilla panna cotta with fresh berry coulis</p>
+          </div>
+          <span class="menu-price">$12</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="section-header">
+        <span class="section-label">Visual Feast</span>
+        <h2>Gallery</h2>
+        <p>A glimpse into the Bella Vita experience</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item tall">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop" alt="Restaurant dish" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop" alt="Food" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&auto=format&fit=crop" alt="Dish" />
+        </div>
+        <div class="gallery-item wide">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop" alt="Interior" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800&auto=format&fit=crop" alt="Pasta" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="section-header">
+        <span class="section-label">Guest Reviews</span>
+        <h2>What Our Guests Say</h2>
+        <p>Real experiences from real diners</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Absolutely the best Italian food I've had outside of Rome. The carbonara is life changing. We come here for every anniversary."</p>
+          <div class="client">
+            <div class="client-avatar">SR</div>
+            <div>
+              <h4>Sofia R.</h4>
+              <span>Regular Guest</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The atmosphere is romantic and warm, the staff incredibly attentive. The bistecca was cooked to absolute perfection."</p>
+          <div class="client">
+            <div class="client-avatar">ML</div>
+            <div>
+              <h4>Marco L.</h4>
+              <span>Regular Guest</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"We hosted our rehearsal dinner here and it was flawless. The team went above and beyond to make our night special."</p>
+          <div class="client">
+            <div class="client-avatar">AK</div>
+            <div>
+              <h4>Amanda K.</h4>
+              <span>Special Event Guest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="section-label">Join Us</span>
+        <h2>Reserve Your Table</h2>
+        <p>Book online or give us a call</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <h4>Address</h4>
+              <p>456 Olive Street, Miami, FL 33101</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <h4>Phone</h4>
+              <p>(305) 555-0247</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon – Thu: 5pm – 10pm</p>
+              <p>Fri – Sat: 5pm – 11pm</p>
+              <p>Sunday: 4pm – 9pm</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Email Address" />
+          </div>
+          <div class="form-row">
+            <input type="date" />
+            <input type="time" />
+          </div>
+          <div class="form-row">
+            <select>
+              <option value="">Number of Guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 – 4 Guests</option>
+              <option>5 – 6 Guests</option>
+              <option>7+ Guests</option>
+            </select>
+            <select>
+              <option value="">Seating Preference</option>
+              <option>Indoor</option>
+              <option>Outdoor Patio</option>
+              <option>Bar Seating</option>
+              <option>Private Room</option>
+            </select>
+          </div>
+          <textarea placeholder="Special requests or dietary requirements..."></textarea>
+          <button type="submit" class="btn">Confirm Reservation</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo">Bella Vita</div>
+          <p>Authentic Italian cuisine crafted with love and tradition since 1998.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Google">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.5!2d-80.1918!3d25.7617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQ1JzQyLjIiTiA4MMKwMTEnMzAuNSJX!5e0!3m2!1sen!2sus!4v1620000000000"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Bella Vita Restaurant. All rights reserved.</p>
+        <p>Designed & Built by <span style="color: #c8a97e;">Sunny Sites</span></p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script>
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.add('fade-in');
+        observer.observe(section);
+      });
+
+      // Back to top
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('show', window.scrollY > 400);
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Menu filter
+      function filterMenu(category) {
+        document.querySelectorAll('.menu-item').forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+      }
+    </script>
+
+  </body>
+</html>
