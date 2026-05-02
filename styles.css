@@ -519,11 +519,14 @@ body {
 .form-row {
   display: flex;
   gap: 16px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .form-row input,
 .form-row select {
   flex: 1;
+  min-width: 0;
 }
 
 .contact-form input,
