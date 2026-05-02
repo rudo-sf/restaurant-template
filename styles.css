@@ -760,6 +760,13 @@ footer {
   #contact {
     overflow: hidden;
   }
+
+  input[type="date"],
+  input[type="time"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
 }
 
 @media (max-width: 480px) {
